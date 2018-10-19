@@ -12,9 +12,9 @@ public interface OrderService {
 
     BigInteger add();
 
-    TOrder query(Integer orderId);
+    TOrder query(BigInteger orderId);
 
     boolean update(TOrder order);
 
-    boolean delete(Integer orderId);
+    boolean delete(BigInteger orderId);
 }

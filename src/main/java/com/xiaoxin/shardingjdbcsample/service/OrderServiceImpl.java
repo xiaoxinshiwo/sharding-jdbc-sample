@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public TOrder query(Integer orderId) {
+    public TOrder query(BigInteger orderId) {
         TOrder order = orderMapper.selectByPrimaryKey(orderId);
         if(order != null){
             TOrderItem orderItem = new TOrderItem();
@@ -65,7 +65,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public boolean delete(Integer orderId) {
+    public boolean delete(BigInteger orderId) {
         TOrder order = orderMapper.selectByPrimaryKey(orderId);
         TOrderItem orderItem = new TOrderItem();
         orderItem.setOrderId(order.getOrderId());

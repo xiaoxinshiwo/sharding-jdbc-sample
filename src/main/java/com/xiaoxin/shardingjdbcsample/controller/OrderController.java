@@ -27,12 +27,12 @@ public class OrderController {
     }
 
     @GetMapping("query/{orderId}")
-    public TOrder query(@PathVariable Integer orderId){
+    public TOrder query(@PathVariable BigInteger orderId){
         return orderService.query(orderId);
     }
 
     @PostMapping("delete/{orderId}")
-    public String delete(@PathVariable Integer orderId){
+    public String delete(@PathVariable BigInteger orderId){
         boolean success =  orderService.delete(orderId);
         return success ? SUCCESS : ERROR;
     }
