@@ -11,7 +11,7 @@
 <configuration>
 
     <springProperty scope="context" name="myAppName" source="spring.application.name"
-                    defaultValue="snail"/>
+                    defaultValue="sjs"/>
     <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>${LOG_PATH}/${myAppName}-error.log</File>
         <encoder>
@@ -65,7 +65,7 @@
         <appender-ref ref="druid"/>
     </appender>
     <!-- mybatis loggers -->
-    <logger name="com.yibo.snail.mapper" level="DEBUG" additivity="false">
+    <logger name="com.xiaoxin.shardingjdbcsample.mapper" level="DEBUG" additivity="false">
         <appender-ref ref="sql-queue"/>
         <appender-ref ref="console"/>
     </logger>
