@@ -8,6 +8,7 @@ import java.math.BigInteger;
 import java.util.Collection;
 
 /**
+ * uuid_short取模的算法
  * @author zhangyongxin
  * @date 2018/10/19 3:05 PM
  */
