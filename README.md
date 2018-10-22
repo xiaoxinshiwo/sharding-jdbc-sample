@@ -1,3 +1,4 @@
+当当sharding-jdbc分库分表插件的样例
 **事项**:
 1. 刷入脚本initial.sql  
 2.代码生成：Run -> Edit Configurations -> + Maven commend line mybatis-generator:generate -e   
