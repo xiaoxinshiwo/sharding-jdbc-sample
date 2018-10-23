@@ -18,7 +18,7 @@ import java.util.Random;
  * @date 2018/10/19 11:48 AM
  */
 @Service
-@Transactional(rollbackFor = Exception.class)
+@Transactional(rollbackFor = Exception.class, timeout = 3)
 public class OrderServiceImpl implements OrderService {
     @Resource
     private TOrderMapper orderMapper;
