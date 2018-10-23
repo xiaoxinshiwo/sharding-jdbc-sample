@@ -1,5 +1,6 @@
 package com.xiaoxin.shardingjdbcsample.service;
 
+import com.github.pagehelper.PageHelper;
 import com.xiaoxin.shardingjdbcsample.mapper.TOrderItemMapper;
 import com.xiaoxin.shardingjdbcsample.mapper.TOrderMapper;
 import com.xiaoxin.shardingjdbcsample.model.TOrder;
@@ -78,8 +79,8 @@ public class OrderServiceImpl implements OrderService {
     public List<TOrder> queryByUserId(Integer userId) {
         TOrder order = new TOrder();
         order.setUserId(userId);
+        PageHelper.orderBy("order_id desc");
         List<TOrder> orderList =  orderMapper.select(order);
-
         return orderList;
     }
 
