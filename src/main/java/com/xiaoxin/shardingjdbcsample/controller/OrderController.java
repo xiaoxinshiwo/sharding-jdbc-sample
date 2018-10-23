@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigInteger;
+import java.util.List;
 
 /**
  * @author zhangyongxin
@@ -29,6 +30,12 @@ public class OrderController {
     @GetMapping("query/{orderId}")
     public TOrder query(@PathVariable BigInteger orderId){
         return orderService.query(orderId);
+    }
+
+
+    @GetMapping("queryByUserId/{userId}")
+    public List<TOrder> queryByUserId(@PathVariable Integer userId){
+        return orderService.queryByUserId(userId);
     }
 
     @PostMapping("delete/{orderId}")

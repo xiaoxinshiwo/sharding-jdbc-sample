@@ -3,6 +3,7 @@ package com.xiaoxin.shardingjdbcsample.service;
 import com.xiaoxin.shardingjdbcsample.model.TOrder;
 
 import java.math.BigInteger;
+import java.util.List;
 
 /**
  * @author zhangyongxin
@@ -17,4 +18,6 @@ public interface OrderService {
     boolean update(TOrder order);
 
     boolean delete(BigInteger orderId);
+
+    List<TOrder> queryByUserId(Integer userId);
 }

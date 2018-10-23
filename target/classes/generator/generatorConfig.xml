@@ -30,7 +30,7 @@
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
 
         <table tableName="t_order_item_0" domainObjectName="TOrderItem">
-            <generatedKey column="order_item_id" sqlStatement="Mysql" identity="true" />
+            <generatedKey column="order_item_id" sqlStatement="SELECT UUID_SHORT()" identity="false" />
         </table>
     </context>
 </generatorConfiguration>

@@ -74,6 +74,15 @@ public class OrderServiceImpl implements OrderService {
         return count > 0;
     }
 
+    @Override
+    public List<TOrder> queryByUserId(Integer userId) {
+        TOrder order = new TOrder();
+        order.setUserId(userId);
+        List<TOrder> orderList =  orderMapper.select(order);
+
+        return orderList;
+    }
+
     private int randomValue(){
         Random random = new Random();
         return Math.abs(random.nextInt());
