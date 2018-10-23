@@ -79,6 +79,7 @@ public class OrderServiceImpl implements OrderService {
     public List<TOrder> queryByUserId(Integer userId) {
         TOrder order = new TOrder();
         order.setUserId(userId);
+        PageHelper.startPage(1,5);
         PageHelper.orderBy("order_id desc");
         List<TOrder> orderList =  orderMapper.select(order);
         return orderList;
